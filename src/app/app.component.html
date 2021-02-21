@@ -1,0 +1,71 @@
+<div class="container">
+	<!-- <hello name="{{ name }}"></hello> -->
+	<br>
+	<p class="text-center"><u>EPSILON-TASK</u></p>
+</div>
+
+<div class="container">
+	<div class="card">
+		<div class="card-header">Photo Card</div>
+		<div class="card-body">
+			<div class="wrapper">
+				<div class="card-photo">
+					<img src="https://images.unsplash.com/photo-1513904178077-6c5730ddd446?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Avatar" style="width:100%">
+					<div class="container-photo">
+						<h4>Beach Day</h4>
+						<p class="full-caps">RUFUS THE DOG</p>
+						<p class="grey-text">Modified by 02/28/19 by bfrost</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<br/>
+	<div class="card">
+		<div class="card-header">Form</div>
+		<div class="card-body custom-form">
+			<form>
+				<label for="name">Name</label><br>
+				<input type="text" id="name" name="name" placeholder="Enter Name"><br>
+				<label for="email">Email</label><br>
+				<input type="email" id="email" name="email" placeholder="Enter Email"><br>
+				<label for="phoneno">Phone Number</label><br>
+				<input type="text" id="phoneno" name="phoneno" placeholder="Enter Phone Number"><br>
+				<label for="password">Password</label><br>
+				<input type="password" id="password" name="password" placeholder="Enter Password"><br>
+				<label for="password">Confirm Password</label><br>
+				<input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" class="mg-bottom-30"><br>
+				<input type="button" value="Save"/>
+      </form>
+		</div>
+	</div>
+	<br>
+	<br>
+
+	<div class="card">
+		<div class="card-header">Table</div>
+		<div class="card-body">
+			<table class="">
+				<thead>
+					<th (click)="sortColumn()">Product
+						Name<span style="float:right"><i [ngClass]="ascSort ? 'fa fa-sort-desc' : 'fa fa-sort-asc'"></i></span>
+					</th>
+					<th class="header-disabled">Price<span class="fa-disabled" style="float:right; color:#000"><i class="fa fa-sort-desc"></i></span>
+					</th>
+					<th class="header-disabled">Category<span class="fa-disabled" style="float:right"><i class="fa fa-sort-desc"></i></span>
+					</th>
+				</thead>
+				<tbody>
+					<tr *ngFor="let row of tableData">
+						<td>{{row.name}}</td>
+						<td>{{row.price}}</td>
+						<td>{{row.category}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<br>
+	<br>
+</div>
